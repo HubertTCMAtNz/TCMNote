@@ -18,6 +18,8 @@ $ ssh-keygen -t rsa -C "your_email@youremail.com"
 
 use following command to add the ssh key
 
+if windows, run `eval `ssh-agent -s`` [reference](eval `ssh-agent -s`)
+
 ```
 $ ssh-add ~/.ssh/id_rsa_activehacker
 
@@ -44,7 +46,9 @@ Host github.com-activehacker
 ```
 [reference](https://gist.github.com/jexchan/2351996)
 
-4. Test your connection
+4. add public key to github account
+
+5. Test your connection
 
 ```
 $ ssh -T git@github.com-activehacker
@@ -67,7 +71,7 @@ Hi oanhnn! You've successfully authenticated, but GitHub does not provide shell 
 Hi superman! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-5. Now all are set, just clone your repositories
+6. Now all are set, just clone your repositories
 
 ```
 $ git clone git@github.com-activehacker:org2/project2.git /path/to/project2
