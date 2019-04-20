@@ -18,7 +18,11 @@ $ ssh-keygen -t rsa -C "your_email@youremail.com"
 
 use following command to add the ssh key
 
-if windows, run `eval `ssh-agent -s`` [reference](eval `ssh-agent -s`)
+if windows, run 
+```
+eval `ssh-agent -s`
+```
+[reference](eval `ssh-agent -s`)
 
 ```
 $ ssh-add ~/.ssh/id_rsa_activehacker
