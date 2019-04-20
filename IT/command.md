@@ -1,5 +1,5 @@
 # git
-- enable git to display no-anscii 
+- enable git to display no-anscii
 
 ```
 git config --global core.quotepath false
@@ -18,11 +18,11 @@ $ ssh-keygen -t rsa -C "your_email@youremail.com"
 
 use following command to add the ssh key
 
-if windows, run 
+if windows, run
 ```
 eval `ssh-agent -s`
 ```
-[reference](eval `ssh-agent -s`)
+[reference](https://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent)
 
 ```
 $ ssh-add ~/.ssh/id_rsa_activehacker
@@ -39,7 +39,7 @@ $ touch config
 $ subl -a config
 ```
 
-then add 
+then add
 
 ```
 #activehacker account
