@@ -1,3 +1,12 @@
+- command history per tab  
+```
+If you are using zsh, append these two lines to .zshrc
+
+unsetopt inc_append_history
+unsetopt share_history
+```
+[reference](https://superuser.com/questions/1245273/iterm2-version-3-individual-history-per-tab)  
+
 # git
 - enable git to display no-anscii
 
