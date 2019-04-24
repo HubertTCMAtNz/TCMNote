@@ -3,3 +3,8 @@
 [Graphql guide](https://github.com/GraphQLGuide/book/tree/master/text)  
 [Convert to mobi books](https://github.com/ViciousPotato/safaribooks)  
 [Docker networks configuration](https://docs.docker.com/compose/compose-file/#network-configuration-reference)  
+[find books](http://citeseerx.ist.psu.edu/index)  
+[pkuseg多领域中文分词工具](https://github.com/lancopku/PKUSeg-python)  
+[结巴分词](https://github.com/fxsjy/jieba)  
+[Neo4j](https://neo4j.com/)  
+[GraphDb](http://graphdb.ontotext.com/)
