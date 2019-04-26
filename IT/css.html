@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .left-semi-circle {
+            width: 25px;
+            height: 50px;
+            background: red;
+            display: inline-block;
+            border-radius: 25px 0px 0px 25px;
+        }
+
+        .right-semi-circle {
+            width: 25px;
+            height: 50px;
+            background: red;
+            display: inline-block;
+            border-radius: 0px 25px 25px 0px;
+        }
+
+        .button-text{
+            background: red;
+            text-align: center;
+            height: 50px;
+            border: 3px solid green;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            border: 0px;
+        }
+
+        .button-circle{
+            border-radius: 24px;
+            height: 48px;
+            background:red;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button">
+        <div class="left-semi-circle"></div>
+        <span class="button-text">Hello world</span>
+        <span class="right-semi-circle"></span>
+    </button>
+
+    <button class="button-circle">
+        <span>Hello world2</span>
+    </button>
+</body>
+
+</html>

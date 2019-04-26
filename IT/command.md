@@ -7,6 +7,16 @@ unsetopt share_history
 ```
 [reference](https://superuser.com/questions/1245273/iterm2-version-3-individual-history-per-tab)  
 
+- Use zsh in VS Code
+[reference](https://medium.com/@ozzievee/configuring-vs-code-integrated-terminal-to-use-oh-my-zsh-f545de1545c1)  
+
+VS Code Settings file path:  
+```
+Windows %APPDATA%\Code\User\settings.json
+macOS $HOME/Library/Application Support/Code/User/settings.json
+Linux $HOME/.config/Code/User/settings.json
+```
+
 # git
 - enable git to display no-anscii
 
