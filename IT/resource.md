@@ -15,3 +15,5 @@
 [button specification](http://plasma.guide/button-specs/)  
 [Redux is only 99 lines](https://gist.github.com/gaearon/ffd88b0e4f00b22c3159)  
 [Install dotnet on Ubuntu](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/install)  
+[React child](https://medium.com/@martin_hotell/react-children-composition-patterns-with-typescript-56dfc8923c64)  
+
