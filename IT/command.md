@@ -17,6 +17,12 @@ macOS $HOME/Library/Application Support/Code/User/settings.json
 Linux $HOME/.config/Code/User/settings.json
 ```
 
+- show white space in VS code  
+[reference](https://stackoverflow.com/questions/30140595/show-whitespace-characters-in-visual-studio-code)  
+```
+"editor.renderWhitespace": "all", 
+```
+
 # git
 - enable git to display no-anscii
 
@@ -33,7 +39,7 @@ git config --global core.quotepath false
 $ ssh-keygen -t rsa -C "your_email@youremail.com"
 ```
 
-2. for example, one key is created in `~/.ssh/id_rsa_activehacker`
+1. for example, one key is created in `~/.ssh/id_rsa_activehacker`
 
 use following command to add the ssh key
 
@@ -50,7 +56,7 @@ $ ssh-add -D
 $ ssh-add -l
 ```
 
-3. Modify the ssh config
+1. Modify the ssh config
 
 ```
 $ cd ~/.ssh/
@@ -69,9 +75,9 @@ Host github.com-activehacker
 ```
 [reference](https://gist.github.com/jexchan/2351996)
 
-4. add public key to github account
+1. add public key to github account
 
-5. Test your connection
+1. Test your connection
 
 ```
 $ ssh -T git@github.com-activehacker
@@ -94,7 +100,7 @@ Hi oanhnn! You've successfully authenticated, but GitHub does not provide shell 
 Hi superman! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-6. Now all are set, just clone your repositories
+1. Now all are set, just clone your repositories
 
 ```
 $ git clone git@github.com-activehacker:org2/project2.git /path/to/project2
