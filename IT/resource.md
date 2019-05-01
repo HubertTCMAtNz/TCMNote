@@ -16,4 +16,11 @@
 [Redux is only 99 lines](https://gist.github.com/gaearon/ffd88b0e4f00b22c3159)  
 [Install dotnet on Ubuntu](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/install)  
 [React child](https://medium.com/@martin_hotell/react-children-composition-patterns-with-typescript-56dfc8923c64)  
-
+[Create react Typescript](https://facebook.github.io/create-react-app/docs/adding-typescript)  
+[sass](https://sass-lang.com/guide)  
+[CSS Modules for React and Typescript](https://medium.com/@tommybernaciak/css-modules-for-react-and-typescript-2dd8f0fd7cdd)  
+[How to use CSS Modules with TypeScript and webpack](https://medium.com/@sapegin/css-modules-with-typescript-and-webpack-6b221ebe5f10)  
+[React全家桶环境搭建过程](https://segmentfault.com/a/1190000014910170)  
+[Typescript](https://www.typescriptlang.org/docs/handbook/basic-types.html)  
+[React JSS](https://cssinjs.org/react-jss/?v=v10.0.0-alpha.16)  
+[REM in css](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/)  
