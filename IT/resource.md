@@ -24,3 +24,5 @@
 [Typescript](https://www.typescriptlang.org/docs/handbook/basic-types.html)  
 [React JSS](https://cssinjs.org/react-jss/?v=v10.0.0-alpha.16)  
 [REM in css](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/)  
+[React Router with page layout](https://simonsmith.io/reusing-layouts-in-react-router-4)  
+[React Router template](https://github.com/cfsanderson/react-router-template)  
