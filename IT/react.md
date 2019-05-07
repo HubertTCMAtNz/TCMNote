@@ -30,3 +30,10 @@
 1. enzyme
 
    [reference](https://airbnb.io/enzyme/)  
+
+1. redux  
+    [reference](https://react-redux.js.org/introduction/basic-tutorial)  
+
+1. react soga
+
+    [reference](https://flaviocopes.com/redux-saga/)  
