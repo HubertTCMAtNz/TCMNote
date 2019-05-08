@@ -67,3 +67,20 @@ sudo docker run hello-world
 ``` 
 sudo apt-get install docker.io
 ```
+
+# zsh in ubuntu
+
+```sh
+apt-get install zsh
+apt-get install git-core
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+command -v zsh | sudo tee -a /etc/shells
+
+chsh -s `which zsh`
+
+sudo shutdown -r now
+```
+
+[reference](https://gist.github.com/tsabat/1498393)

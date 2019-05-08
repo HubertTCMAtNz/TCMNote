@@ -20,4 +20,8 @@
 
     [reference](https://linuxize.com/post/how-to-install-gradle-on-ubuntu-18-04/)  
 
-1. view gradle task: `gradle tasks`
+1. view gradle task: `gradle tasks`  
+
+1. graphql java
+    https://www.graphql-java.com/documentation/v12/
+    https://stackoverflow.com/questions/52868759/difference-in-usage-of-graphql-java-vs-graphql-java-tools
