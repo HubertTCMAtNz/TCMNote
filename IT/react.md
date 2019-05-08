@@ -2,13 +2,6 @@
 
 1. Create Typescript
 
-<<<<<<< HEAD
-```shell
-yarn create react-app my-app --typescript
-```
-
-[referece](https://facebook.github.io/create-react-app/docs/adding-typescript)  
-=======
     ```shell
     yarn create react-app my-app --typescript
     ```
@@ -33,4 +26,14 @@ yarn create react-app my-app --typescript
     ```
 
     [reference](https://medium.com/@marcelwopperer/how-to-use-bootstrap-in-your-react-app-using-css-modules-73fbc52de081)  
->>>>>>> 3454f41b3c343840ed8d3f7a41247ed323d52074
+
+1. enzyme
+
+   [reference](https://airbnb.io/enzyme/)  
+
+1. redux  
+    [reference](https://react-redux.js.org/introduction/basic-tutorial)  
+
+1. react soga
+
+    [reference](https://flaviocopes.com/redux-saga/)  
