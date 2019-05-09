@@ -14,7 +14,6 @@
 [flex layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)  
 [css in js](https://speakerdeck.com/vjeux/react-css-in-js)  
 [button specification](http://plasma.guide/button-specs/)  
-[Redux is only 99 lines](https://gist.github.com/gaearon/ffd88b0e4f00b22c3159)  
 [Install dotnet on Ubuntu](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/install)  
 [React child](https://medium.com/@martin_hotell/react-children-composition-patterns-with-typescript-56dfc8923c64)  
 [Create react Typescript](https://facebook.github.io/create-react-app/docs/adding-typescript)  

@@ -20,7 +20,7 @@ Linux $HOME/.config/Code/User/settings.json
 - show white space in VS code  
 [reference](https://stackoverflow.com/questions/30140595/show-whitespace-characters-in-visual-studio-code)  
 ```
-"editor.renderWhitespace": "all", 
+"editor.renderWhitespace": "all",
 ```
 
 # git
