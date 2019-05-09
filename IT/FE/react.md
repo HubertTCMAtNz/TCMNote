@@ -10,6 +10,8 @@
 
 1. React router
     [reference](https://github.com/ReactTraining/react-router)  
+    [multiple layout](https://gist.github.com/avinmathew/e82fe7e757b20cb337d5219e0ab8dc2c)  
+    [multiple layout](http://www.uxshaper.com/different-layouts-with-react-router/)  
 
 1. css
 
@@ -39,6 +41,7 @@
 
 1. react soga
     [reference](https://flaviocopes.com/redux-saga/)  
+    [saga patter](https://medium.freecodecamp.org/redux-saga-common-patterns-48437892e11c)  
 
     ```api
     fork
