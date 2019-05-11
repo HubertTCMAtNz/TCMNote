@@ -23,5 +23,15 @@
 1. view gradle task: `gradle tasks`  
 
 1. graphql java
-    https://www.graphql-java.com/documentation/v12/
-    https://stackoverflow.com/questions/52868759/difference-in-usage-of-graphql-java-vs-graphql-java-tools
+    [graphql java](https://www.graphql-java.com/documentation/v12/)  
+    [graphql java-tools](https://stackoverflow.com/questions/52868759/difference-in-usage-of-graphql-java-vs-graphql-java-tools)  
+    [graphql java-tools](https://github.com/graphql-java-kickstart/graphql-java-tools)  
+    [code first](https://www.howtographql.com/graphql-java/11-alternative-approaches/)  
+    [spqr](https://github.com/leangen/graphql-spqr)  
+    [code first vs schema first](https://committed.software/posts/graphql-java/graphql-java/)  
+    [spring + graphql  Okta](https://developer.okta.com/blog/2018/08/16/secure-api-spring-boot-graphql)  
+    [graphql java authentication](https://www.howtographql.com/graphql-java/5-authentication/)  
+    [graphql java demo](https://github.com/npalm/graphql-java-demo)  
+    [auth directive](https://www.graphql-java.com/documentation/v11/sdl-directives/)  
+    [graphql spring boot](https://github.com/graphql-java-kickstart/graphql-spring-boot)  
+    [tutorial](https://www.graphql-java-kickstart.com/servlet/getting-started/)  

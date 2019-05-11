@@ -13,7 +13,6 @@
     [multiple layout](https://gist.github.com/avinmathew/e82fe7e757b20cb337d5219e0ab8dc2c)  
     [multiple layout](http://www.uxshaper.com/different-layouts-with-react-router/)  
 
-
 1. css
 
     ```detail:
@@ -48,10 +47,17 @@
     fork
     ```
 
+1. Apollo Client  
+    [document](https://github.com/apollographql/apollo-client)  
+    [react integration](https://www.apollographql.com/docs/react/)  
+
 1. Example
     [code](https://github.com/resir014/react-redux-typescript-example)  
     [post](https://resir014.xyz/posts/2018/07/06/redux-4-plus-typescript/)  
     [react emotion](https://github.com/emotion-js/emotion)  
+    [react+spring](https://spring.io/guides/tutorials/react-and-spring-data-rest/)  
+    [yarn+spring](https://medium.com/@itzgeoff/including-react-in-your-spring-boot-maven-build-ae3b8f8826e)  
+    [run webpack with gradle](https://guides.gradle.org/running-webpack-with-gradle/)  
 
     ```api
     ConnectedRouter
