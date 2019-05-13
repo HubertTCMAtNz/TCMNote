@@ -1,16 +1,18 @@
 # Rider 
 
-[Reference](https://www.jetbrains.com/help/rider/First_Steps.html)
+1. [Reference](https://www.jetbrains.com/help/rider/First_Steps.html)  
 
-`Alt+Enter` 
+	`Alt+Enter` 
 
-- Locating current code in project tree
+1. Locating current code in project tree  
 
-```
-Shift+Option+L
-```
+	```
+	Shift+Option+L
+	```
 
-- Find something
+1. Find something  
 
-`⌘ T`
+	`⌘ T`
+
+1. Collopase all `Command + Option + -`
 
