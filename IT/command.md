@@ -1,3 +1,12 @@
+1. Spotlight search does not contains application  
+	```
+	sudo mdutil -a -i off
+	sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+	sudo mdutil -a -i on
+	```
+	[reference](https://apple.stackexchange.com/questions/62715/applications-dont-show-up-in-spotlight)  
+
 - command history per tab  
 ```
 If you are using zsh, append these two lines to .zshrc
