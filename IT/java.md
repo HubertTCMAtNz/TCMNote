@@ -20,8 +20,27 @@
 
     [reference](https://linuxize.com/post/how-to-install-gradle-on-ubuntu-18-04/)  
 
+1. uninstall jdk
+
+    ```steps
+    sudo update-alternatives --remove "java" "/usr/lib/jvm/jdk[version]/bin/java"
+
+    sudo update-alternatives --remove "javac" "/usr/lib/jvm/jdk[version]/bin/javac"
+
+    sudo update-alternatives --remove "javaws" "/usr/lib/jvm/jdk[version]/jre/bin/javaws"
+
+    sudo rm -r /usr/lib/jvm/jdk[version]
+
+    sudo apt-get remove openjdk*
+    sudo apt-get purge openjdk*
+    sudo apt-get purge --auto-remove openjdk*
+    ```
+
+    [reference](https://novicestuffs.wordpress.com/2017/04/25/how-to-uninstall-java-from-linux/)  
+
 1. Install java8  
     [reference](https://websiteforstudents.com/how-to-install-oracle-java-jdk8-on-ubuntu-16-04-17-10-18-04-desktops/)  
+    [reference](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)  
 
 1. view gradle task: `gradle tasks`  
 
