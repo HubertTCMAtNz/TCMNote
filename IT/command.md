@@ -1,11 +1,32 @@
 1. Spotlight search does not contains application  
-	```
+	``` does not work
 	sudo mdutil -a -i off
 	sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 	sudo mdutil -a -i on
 	```
 	[reference](https://apple.stackexchange.com/questions/62715/applications-dont-show-up-in-spotlight)  
+
+1. indexing and search are disabled
+	``` does not work
+	locate .metadata_never_index
+	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+	sudo mdutil -i on /
+	```
+
+	```
+	sudo mdutil -a -i off 
+	sudo mdutil -a -i on 
+	```
+	[reference](http://blog.shiraj.com/2014/01/terminal-commands-for-improving-spotlight-indexing-volume/)  
+
+1. recovery mode
+	```
+	csrutil disable
+	csrutil enable
+	```
+
+
 
 - command history per tab  
 ```
