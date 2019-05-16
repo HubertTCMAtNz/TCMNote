@@ -28,3 +28,4 @@
 [React Router template](https://github.com/cfsanderson/react-router-template)  
 [Proxy in React](https://facebook.github.io/create-react-app/docs/proxying-api-requests-in-development)  
 [run gradle in VSCode](https://www.syncfusion.com/ebooks/gradle_succinctly/running-gradle-from-visual-studio-code)  
+[Autofac keyed service](https://autofaccn.readthedocs.io/en/latest/advanced/keyed-services.html)  
