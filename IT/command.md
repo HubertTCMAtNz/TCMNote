@@ -195,6 +195,10 @@
 
 
 # Docker
+    ```
+    docker system prune
+    docker system prune --volumne
+    ```
 - postprogres
 
 [docker file reference](https://docs.docker.com/engine/reference/builder/)
