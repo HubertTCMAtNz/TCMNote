@@ -41,6 +41,51 @@
 1. Install java8  
     [reference](https://websiteforstudents.com/how-to-install-oracle-java-jdk8-on-ubuntu-16-04-17-10-18-04-desktops/)  
     [reference](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)  
+    [reference](http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/)  
+
+    ```command
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt update; sudo apt install oracle-java8-installer
+    javac -version
+    sudo apt install oracle-java8-set-default
+    ```
+
+    Oracle-Java8-Installer: No installation candidate
+
+    ```does not work
+    As root, go to this folder: /etc/apt/sources.list.d
+    Locate this file: webupd8team-java.list and delete it.
+    Execute sudo apt-get update for the system to remove any reference to that update server.
+    Execute sudo add-apt-repository ppa:webupd8team/java to add the correct ppa to your system.
+    Execute sudo apt-get update again and you should be able to install everything correctly.
+    ```
+
+    [openjdk-8](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04)  
+
+    ```instal java8
+    https://www.liquidweb.com/kb/install-oracle-java-ubuntu-18-04/
+    https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+    sudo apt install openjdk-8-jdk
+    sudo update-alternatives --config java
+    sudo update-alternatives --config javac
+    sudo vim /etc/environment
+    source /etc/environment
+    ```
+
+1. update spring boot to GAE  
+    [gradle template](https://github.com/kaiinui/template-spring-boot-gae/blob/master/build.gradle)  
+    [steps](https://github.com/3wks/spring-boot-gae)  
+    [gradle](https://cloud.google.com/appengine/docs/standard/java/tools/gradle)  
+
+    ``` gradle
+    classpath 'com.google.cloud.tools:appengine-gradle-plugin:1.+'    // Latest 1.x.x release
+    compile 'com.threewks.spring:spring-boot-gae:2.2.1' (https://mvnrepository.com/artifact/com.threewks.spring/spring-boot-gae)
+
+    gradle appengineRun
+
+    gcloud auth application-default login
+    gcloud projects list
+    ```
 
 1. view gradle task: `gradle tasks`  
 
@@ -74,7 +119,6 @@
     [GAE+gradle](https://github.com/int128/appengine-spring-boot-starter)  
     [GAE examples](https://github.com/spring-cloud/spring-cloud-gcp/tree/master/spring-cloud-gcp-samples)  
     [GAE flex env](https://medium.com/@wkrzywiec/how-to-publish-a-spring-boot-app-with-a-database-on-the-google-cloud-platform-614b88613ce3)  
-    [GAE standard env](https://vitalflux.com/spring-boot-app-on-google-app-engine-standard-environment/)  
     [GAE gradle standard env](https://cloud.google.com/appengine/docs/standard/java/tools/gradle)  
     [Google chart API to create QR code](https://developers.google.com/chart/?csw=1)  
     [GAE](https://cloud.google.com/appengine/kb/)  
