@@ -87,6 +87,21 @@
     gcloud projects list
     ```
 
+1. gcloud command line  
+   [reference](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)  
+   ```
+   gcloud init  (gcloud init --console-only)
+   gcloud auth list
+   gcloud config list
+   gcloud info
+   gcloud help
+   ```
+   [deploy spring boot to gae](https://codelabs.developers.google.com/codelabs/cloud-app-engine-springboot/index.html?index=..%2F..index#7)  
+   ```
+   gcloud app create --region us-central
+   mvn appengine:deploy
+   ```
+
 1. view gradle task: `gradle tasks`  
 
 1. graphql java  
