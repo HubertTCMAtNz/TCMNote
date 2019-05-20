@@ -98,9 +98,16 @@
    ```
    [deploy spring boot to gae](https://codelabs.developers.google.com/codelabs/cloud-app-engine-springboot/index.html?index=..%2F..index#7)  
    ```
-   gcloud app create --region us-central
+   gcloud app create --region australia-southeast1
    mvn appengine:deploy
+   gcloud app browse
    ```
+
+1. maven  
+    ```
+    mvn clean package
+    mvn appengine:run
+    ```
 
 1. view gradle task: `gradle tasks`  
 
@@ -139,3 +146,4 @@
     [GAE](https://cloud.google.com/appengine/kb/)  
     [java8](https://cloud.google.com/appengine/docs/standard/java/runtime)  
     [GAE zxing](https://stackoverflow.com/questions/23189048/google-app-engine-generate-qr-code)  
+    [GAE maven command](https://cloud.google.com/appengine/docs/standard/java/tools/using-maven)  
