@@ -29,3 +29,6 @@
 [Proxy in React](https://facebook.github.io/create-react-app/docs/proxying-api-requests-in-development)  
 [run gradle in VSCode](https://www.syncfusion.com/ebooks/gradle_succinctly/running-gradle-from-visual-studio-code)  
 [Autofac keyed service](https://autofaccn.readthedocs.io/en/latest/advanced/keyed-services.html)  
+[Typescript](https://www.typescriptlang.org/docs/handbook/basic-types.html)  
+
+[Safer bash scripts with 'set -euxo pipefail'](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)  
