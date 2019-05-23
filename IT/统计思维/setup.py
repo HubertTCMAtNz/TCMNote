@@ -9,21 +9,25 @@ import sys
 import gzip
 import os
 
+
 class Record(object):
     """Represents a record."""
 
-class Respondent(Record): 
+
+class Respondent(Record):
     """Represents a respondent."""
+
 
 class Pregnancy(Record):
     """Represents a pregnancy."""
+
 
 class Table(object):
     """Represents a table as a list of objects"""
 
     def __init__(self):
         self.records = []
-        
+
     def __len__(self):
         return len(self.records)
 
@@ -125,7 +129,8 @@ class Respondents(Table):
         """
         return [
             ('caseid', 1, 12, int),
-            ]
+        ]
+
 
 class Pregnancies(Table):
     """Contains survey data about a Pregnancy."""
@@ -158,7 +163,7 @@ class Pregnancies(Table):
             ('birthord', 278, 279, int),
             ('agepreg', 284, 287, int),
             ('finalwgt', 423, 440, float),
-            ]
+        ]
 
     def Recode(self):
         for rec in self.records:
@@ -176,7 +181,7 @@ class Pregnancies(Table):
             # filtering
             try:
                 if (rec.birthwgt_lb != 'NA' and rec.birthwgt_lb < 20 and
-                    rec.birthwgt_oz != 'NA' and rec.birthwgt_oz <= 16):
+                        rec.birthwgt_oz != 'NA' and rec.birthwgt_oz <= 16):
                     rec.totalwgt_oz = rec.birthwgt_lb * 16 + rec.birthwgt_oz
                 else:
                     rec.totalwgt_oz = 'NA'
@@ -193,6 +198,6 @@ def main(name, data_dir='.'):
     preg.ReadRecords(data_dir)
     print 'Number of pregnancies', len(preg.records)
 
-    
+
 if __name__ == '__main__':
     main(*sys.argv)

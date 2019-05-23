@@ -132,6 +132,26 @@
     [security-angular](https://github.com/ipassynk/angular-springboot-jwt)  
     [tooken in cookie](https://stackoverflow.com/questions/44923418/store-token-from-oauth2-server-in-cookie-using-spring-oauth)  
 
+    [set cookie](https://stackoverflow.com/questions/24642508/spring-inserting-cookies-in-a-rest-call-response)  
+
+    ```code
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ResponseEntity<String> singleSignOn(@RequestBody String bodySso, HttpServletResponse response) {
+
+        response.addCookie(new Cookie("heroku-nav-data", navData));
+        return new ResponseEntity<String>(id,headers,HttpStatus.OK);
+    }
+
+    final Cookie cookie = new Cookie(this.cookieName, principal.getSignedJWT());
+    cookie.setDomain(this.cookieDomain);
+    cookie.setSecure(this.sendSecureCookie);
+    cookie.setHttpOnly(true);
+    cookie.setMaxAge(maxAge);
+    response.addCookie(cookie);
+    ```
+
+    [JWK with cookie](https://stackoverflow.com/questions/38341114/spring-security-cookie-jwt-authentication)  
+
 1. Google App Engine  
     [document](https://cloud.google.com/appengine/)  
     [GAE + spring boot](https://medium.com/google-cloud/getting-started-with-google-app-engine-and-spring-boot-in-5-steps-2d0f8165c89)  
@@ -147,3 +167,17 @@
     [java8](https://cloud.google.com/appengine/docs/standard/java/runtime)  
     [GAE zxing](https://stackoverflow.com/questions/23189048/google-app-engine-generate-qr-code)  
     [GAE maven command](https://cloud.google.com/appengine/docs/standard/java/tools/using-maven)  
+    [GAE Resource config](https://cloud.google.com/appengine/docs/standard/java/config/appref#threadsafe)  
+
+    [gae standard aysnc not supported](https://cloud.google.com/appengine/docs/standard/java/release-notes)  
+
+    ```limitation
+    June 28, 2017
+    What's New
+    .....
+
+    Known Java 8 Runtime Limitations
+
+    The /tmp directory is writable. Files in /tmp will consume memory allocated to your instance.
+    Async Servlet 3.1 is not supported.
+    ```

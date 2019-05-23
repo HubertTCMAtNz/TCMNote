@@ -154,5 +154,5 @@
     ConnectedRouter
     ```
 
-1. React Source code 
+1. React Source code  
    [Source code](https://medium.com/@ericchurchill/the-react-source-code-a-beginners-walkthrough-i-7240e86f3030)  
