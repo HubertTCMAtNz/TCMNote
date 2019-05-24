@@ -149,6 +149,7 @@
     [react+spring](https://spring.io/guides/tutorials/react-and-spring-data-rest/)  
     [yarn+spring](https://medium.com/@itzgeoff/including-react-in-your-spring-boot-maven-build-ae3b8f8826e)  
     [run webpack with gradle](https://guides.gradle.org/running-webpack-with-gradle/)  
+    [react tutorial](https://auth0.com/blog/react-tutorial-building-and-securing-your-first-app/)  
 
     ```api
     ConnectedRouter
