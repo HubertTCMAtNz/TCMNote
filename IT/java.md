@@ -1,5 +1,8 @@
 # Commands, settings related with Java dev
 
+1. vscode compile java  
+    [extension](https://github.com/redhat-developer/vscode-java/blob/master/README.md)  
+
 1. How to install gradle:  
 
     ```sh
