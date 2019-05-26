@@ -197,7 +197,7 @@
 # Docker
     ```
     docker system prune
-    docker system prune --volumne
+    docker system prune --volumes
     ```
 - postprogres
 
