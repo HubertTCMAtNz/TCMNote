@@ -12,6 +12,8 @@
     [reference](https://github.com/ReactTraining/react-router)  
     [multiple layout](https://gist.github.com/avinmathew/e82fe7e757b20cb337d5219e0ab8dc2c)  
     [multiple layout](http://www.uxshaper.com/different-layouts-with-react-router/)  
+    [react router link locally historyApiFallback](https://tylermcginnis.com/react-router-cannot-get-url-refresh/)  
+    [react router link locally  ](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually)  
 
 1. css
 
@@ -156,4 +158,71 @@
     ```
 
 1. React Source code  
-   [Source code](https://medium.com/@ericchurchill/the-react-source-code-a-beginners-walkthrough-i-7240e86f3030)  
+   [Source code](https://medium.com/@ericchurchill/the-react-source-code-a-beginners-walkthrough-i-7240e86f3030) 
+
+1. Advance skills  
+   [React Higher-Order Components in TypeScript](https://medium.com/@jrwebdev/react-higher-order-component-patterns-in-typescript-42278f7590fb)  
+
+   ```example
+   Enhancers
+
+   interface WithLoadingProps {
+    loading: boolean;
+    }
+
+    const withLoading = <P extends object>(Component: React.ComponentType<P>) =>
+    class WithLoading extends React.Component<P & WithLoadingProps> {
+        render() {
+        const { loading, ...props } = this.props;
+        return loading ? <LoadingSpinner /> : <Component {...props as P} />;
+        }
+    };
+
+    Injectors
+    import { Subtract } from 'utility-types';
+
+    export interface InjectedCounterProps {
+    value: number;
+    onIncrement(): void;
+    onDecrement(): void;
+    }
+
+    interface MakeCounterState {
+    value: number;
+    }
+
+    const makeCounter = <P extends InjectedCounterProps>(
+    Component: React.ComponentType<P>
+    ) =>
+    class MakeCounter extends React.Component<
+        Subtract<P, InjectedCounterProps>,
+        MakeCounterState
+    > {
+        state: MakeCounterState = {
+        value: 0,
+        };
+
+        increment = () => {
+        this.setState(prevState => ({
+            value: prevState.value + 1,
+        }));
+        };
+
+        decrement = () => {
+        this.setState(prevState => ({
+            value: prevState.value - 1,
+        }));
+        };
+
+        render() {
+        return (
+            <Component
+            {...this.props as P}
+            value={this.state.value}
+            onIncrement={this.increment}
+            onDecrement={this.decrement}
+            />
+        );
+        }
+    };
+   ```
