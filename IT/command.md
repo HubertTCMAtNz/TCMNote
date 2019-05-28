@@ -1,5 +1,7 @@
 # Commands
 
+1. kill process on port `sudo kill $(sudo lsof -t -i:8080)`
+
 1. Spotlight search does not contains application  
 
 	``` does not work

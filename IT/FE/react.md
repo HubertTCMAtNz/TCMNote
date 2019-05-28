@@ -226,3 +226,27 @@
         }
     };
    ```
+
+1. library  
+    [material ui](https://material-ui.com/components/cards/)  
+    [material ui free theme](https://demos.creative-tim.com/material-kit-react/?_ga=2.223690523.1876597192.1559035984-518466910.1559035984#/documentation/tutorial)  
+    [material kit react](https://www.npmjs.com/package/material-kit-react)  
+    [ant](https://pro.ant.design/docs/getting-started)  
+
+1. webpack  
+    [genearete multiple html](https://stackoverflow.com/questions/39798095/multiple-html-files-using-webpack)  
+
+    ```code
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/index.html',
+            chunks: ['main']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'example.html',
+            template: 'src/example.html',
+            chunks: ['exampleEntry']
+        })
+    ]
+    ```

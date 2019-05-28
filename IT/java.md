@@ -153,6 +153,29 @@
     response.addCookie(cookie);
     ```
 
+    [delete cookie](https://attacomsian.com/blog/cookies-spring-boot)  
+
+    ```cookie
+    // create a cookie
+    Cookie cookie = new Cookie("username", null);
+    cookie.setMaxAge(0);
+    cookie.setSecure(true);
+    cookie.setHttpOnly(true);
+    cookie.setPath("/");
+
+    //add cookie to response
+    response.addCookie(cookie);
+
+    // A secure cookie is the one which is only sent to the server over an encrypted HTTPS connection.
+    // Secure cookies cannot be transmitted to the server over unencrypted HTTP connections.
+    Cookie cookie = new Cookie("username", "Jovan");
+    cookie.setMaxAge(7 * 24 * 60 * 60); // expires in 7 days
+    cookie.setSecure(true);
+
+    //add cookie to response
+    response.addCookie(cookie);
+    ```
+
     [JWK with cookie](https://stackoverflow.com/questions/38341114/spring-security-cookie-jwt-authentication)  
 
 1. Google App Engine  
