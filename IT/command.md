@@ -1,6 +1,12 @@
 # Commands
 
-1. kill process on port `sudo kill $(sudo lsof -t -i:8080)`
+1. kill process on port `sudo kill $(sudo lsof -t -i:8080)`  
+1. git  
+
+   [remove local branch](https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote)  
+   ```sh
+   git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+   ```
 
 1. Spotlight search does not contains application  
 

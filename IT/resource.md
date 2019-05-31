@@ -32,3 +32,5 @@
 [Typescript](https://www.typescriptlang.org/docs/handbook/basic-types.html)  
 
 [Safer bash scripts with 'set -euxo pipefail'](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)  
+
+[decompiled C# code](https://sharplab.io/#v2:D4AQDABCCMDcCwAocVoBYGKQOwIYFsBTAZwAdcBjQiACUIBt6B7AdSYCd6ATJAbyQiCoAJlQB2AUP6Ihs1ADZUAZgA8AS2wAXAHwQA4oU0A5AK74ARoXbEAFAEpJciNKdOY0KGIhhMrue88IOEc/VA8QL2FfVwBfJBDZGEUQNAgAWVwNGxgwAG0AXQhcdgBzYgcZVxdQwQA3YohsM0trCABefUNTCytbO2iamABOGyae6wA6A00AFQBPUkJ7CaMCQn6EoTjKwW2YoA==)  
