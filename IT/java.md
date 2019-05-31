@@ -178,6 +178,26 @@
 
     [JWK with cookie](https://stackoverflow.com/questions/38341114/spring-security-cookie-jwt-authentication)  
 
+    [global exception handler](https://www.toptal.com/java/spring-boot-rest-api-error-handling)  
+
+    ```code
+    @Order(Ordered.HIGHEST_PRECEDENCE)
+    @ControllerAdvice
+    public class RestExceptionHandler extends ResponseEntityExceptionHandler {
+        @Override
+        protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+            String error = "Malformed JSON request";
+            return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, error, ex));
+        }
+
+        private ResponseEntity<Object> buildResponseEntity(ApiError apiError) {
+            return new ResponseEntity<>(apiError, apiError.getStatus());
+        }
+
+        //other exception handlers below
+    }
+    ```
+
 1. Google App Engine  
     [document](https://cloud.google.com/appengine/)  
     [GAE + spring boot](https://medium.com/google-cloud/getting-started-with-google-app-engine-and-spring-boot-in-5-steps-2d0f8165c89)  
@@ -207,3 +227,7 @@
     The /tmp directory is writable. Files in /tmp will consume memory allocated to your instance.
     Async Servlet 3.1 is not supported.
     ```
+
+    [google store index](https://cloud.google.com/appengine/docs/standard/go/datastore/indexes)  
+    [google store quotes](https://cloud.google.com/appengine/quotas#Datastore)  
+    [google store how entities stored](https://cloud.google.com/appengine/articles/storage_breakdown)  
