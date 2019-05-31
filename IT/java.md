@@ -231,3 +231,21 @@
     [google store index](https://cloud.google.com/appengine/docs/standard/go/datastore/indexes)  
     [google store quotes](https://cloud.google.com/appengine/quotas#Datastore)  
     [google store how entities stored](https://cloud.google.com/appengine/articles/storage_breakdown)  
+    [how to: google application engine](https://cloud.google.com/appengine/docs/standard/java/how-to)  
+    [data model in google store](https://www.shiftedup.com/2015/04/11/an-introduction-to-data-modeling-using-googles-datastore)  
+
+    ```text
+    Entity: instance, similiar with row
+    Entity Kind: category of queries
+    Properties: column
+    Multi-valued properties:
+    Keys:
+    Relationships:
+    Consistency: This causes what we know as stale results: information that's not up-to-date when retrieved from the Datastore. This is probably one of the biggest challenges when using Google's Datastore.
+    Entity Groups: when designing the structure of your data, you can tell the Datastore what information is closely related and should be stored on the same place. This way, we make sure that when returned together (check ancestor queries), you'll never get stale data.
+    Ancestors:
+
+    ```
+
+    [naive example about google data store](https://github.com/GoogleCloudPlatform/getting-started-java/tree/master/bookshelf/2-structured-data/src/main/java/com/example/getstarted/util)  
+    [exmaple](https://cloud.google.com/java/getting-started-appengine-standard/tutorial-app)  
