@@ -3,6 +3,9 @@
 1. vscode compile java  
     [extension](https://github.com/redhat-developer/vscode-java/blob/master/README.md)  
 
+1. code style  
+    [google code style](https://google.github.io/styleguide/javaguide.html)  
+
 1. How to install gradle:  
 
     ```sh
@@ -249,3 +252,19 @@
 
     [naive example about google data store](https://github.com/GoogleCloudPlatform/getting-started-java/tree/master/bookshelf/2-structured-data/src/main/java/com/example/getstarted/util)  
     [exmaple](https://cloud.google.com/java/getting-started-appengine-standard/tutorial-app)  
+    [JPA in GAE](https://cloud.google.com/appengine/docs/standard/java/datastore/jpa/overview-dn2)  
+    [objectity for google data store](https://github.com/objectify/objectify)  
+    [spring-boot-objectify-sample](https://github.com/takemikami/spring-boot-objectify-sample)  
+
+    [Objectify](https://github.com/objectify/objectify/wiki/Setup)  
+
+    ```sh
+    gcloud components install cloud-datastore-emulator
+
+    gcloud beta emulators datastore start --host-port=localhost:8484
+    ```
+
+    ```url
+    datastore link: https://console.cloud.google.com/datastore
+    project link: https://console.cloud.google.com/logs/viewer
+    ```
