@@ -12,3 +12,33 @@
     ```
 
     [Anders Hejlsberg](https://en.wikipedia.org/wiki/Anders_Hejlsberg)  
+
+1. Typescript document  
+    [hand book](https://www.typescriptlang.org/docs/handbook/interfaces.html)  
+
+    ```Typescript
+    interface SquareConfig {
+        color?: string;
+        width?: number;
+        [propName: string]: any;
+    }
+
+    // Function Types
+    interface SearchFunc {
+        (source: string, subString: string): boolean;
+    }
+
+    interface Counter {
+        (start: number): string;
+        interval: number;
+        reset(): void;
+    }
+
+    function buildName(firstName: string, ...restOfName: string[]) {
+        return firstName + " " + restOfName.join(" ");
+    }
+
+    function f(this: void) {
+        // make sure `this` is unusable in this standalone function
+    }
+    ```
