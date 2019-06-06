@@ -41,4 +41,8 @@
     function f(this: void) {
         // make sure `this` is unusable in this standalone function
     }
+
+    type NonNullableConveter<T, K extends keyof T> = {
+        [P in K]: NonNullable<T[P]>;
+    };
     ```
