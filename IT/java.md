@@ -95,22 +95,26 @@
 
 1. gcloud command line  
    [reference](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)  
-   ```
+
+   ```sh
    gcloud init  (gcloud init --console-only)
    gcloud auth list
    gcloud config list
    gcloud info
    gcloud help
    ```
+
    [deploy spring boot to gae](https://codelabs.developers.google.com/codelabs/cloud-app-engine-springboot/index.html?index=..%2F..index#7)  
-   ```
+
+   ```sh
    gcloud app create --region australia-southeast1
    mvn appengine:deploy
    gcloud app browse
    ```
 
 1. maven  
-    ```
+
+    ```sh
     mvn clean package
     mvn appengine:run
     ```
@@ -268,3 +272,6 @@
     datastore link: https://console.cloud.google.com/datastore
     project link: https://console.cloud.google.com/logs/viewer
     ```
+
+1. auth  
+    [OAuth with filter](https://medium.com/omarelgabrys-blog/microservices-with-spring-boot-authentication-with-jwt-part-3-fafc9d7187e8)  
