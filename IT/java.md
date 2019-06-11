@@ -275,3 +275,16 @@
 
 1. auth  
     [OAuth with filter](https://medium.com/omarelgabrys-blog/microservices-with-spring-boot-authentication-with-jwt-part-3-fafc9d7187e8)  
+    [Logout handlers](https://github.com/pezetem/spring-security-angular-skeleton/blob/master/src/main/java/com/pezetem/blog/code/spring_security_custom_authorizers/security/SecurityConfiguration.java)  
+
+    ```java
+        import org.springframework.security.web.authentication.logout.LogoutHandler;
+        import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+        @Bean
+        List<LogoutHandler> logoutHandlers(CsrfTokenRepository tokenRepository){
+            return List.of(
+                    new CsrfLogoutHandler(tokenRepository),
+                    new SecurityContextLogoutHandler()
+            );
+        }
+    ```
