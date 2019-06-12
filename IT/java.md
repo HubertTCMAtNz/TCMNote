@@ -288,3 +288,153 @@
             );
         }
     ```
+
+    [0Auth2](https://github.com/spring-projects/spring-security.git)  
+
+    ```java
+	@Configuration
+	@EnableAuthorizationServer
+	public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
+		
+		@Autowired
+		private BCryptPasswordEncoder passwordEncoder;
+	
+		@Override
+		public void configure(
+		AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+			oauthServer.tokenKeyAccess("permitAll()")
+			.checkTokenAccess("isAuthenticated()");
+		}
+	
+		@Override
+		public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+			clients.inMemory()
+			.withClient("SampleClientId")
+			.secret(passwordEncoder.encode("secret"))
+			.authorizedGrantTypes("authorization_code")
+			.scopes("user_info")
+			.autoApprove(true) 
+			.redirectUris("http://localhost:8082/ui/login","http://localhost:8083/ui2/login"); 
+		}
+	}
+    ....
+
+    [Example](https://www.devglan.com/spring-security/spring-boot-oauth2-jwt-example)  
+
+    ```java  out of date
+    @Configuration
+    @EnableAuthorizationServer
+    public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+
+        static final String CLIEN_ID = "devglan-client";
+        static final String CLIENT_SECRET = "devglan-secret";
+        static final String GRANT_TYPE_PASSWORD = "password";
+        static final String AUTHORIZATION_CODE = "authorization_code";
+        static final String REFRESH_TOKEN = "refresh_token";
+        static final String IMPLICIT = "implicit";
+        static final String SCOPE_READ = "read";
+        static final String SCOPE_WRITE = "write";
+        static final String TRUST = "trust";
+        static final int ACCESS_TOKEN_VALIDITY_SECONDS = 1*60*60;
+        static final int FREFRESH_TOKEN_VALIDITY_SECONDS = 6*60*60;
+
+        @Autowired
+        private AuthenticationManager authenticationManager;
+
+        @Bean
+        public JwtAccessTokenConverter accessTokenConverter() {
+            JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+            converter.setSigningKey("as466gf");
+            return converter;
+        }
+
+        @Bean
+        public TokenStore tokenStore() {
+            return new JwtTokenStore(accessTokenConverter());
+        }
+
+        @Override
+        public void configure(ClientDetailsServiceConfigurer configurer) throws Exception {
+            configurer
+                    .inMemory()
+                    .withClient(CLIEN_ID)
+                    .secret(CLIENT_SECRET)
+                    .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT )
+                    .scopes(SCOPE_READ, SCOPE_WRITE, TRUST)
+                    .accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS)
+                    .refreshTokenValiditySeconds(FREFRESH_TOKEN_VALIDITY_SECONDS);
+        }
+
+        @Override
+        public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+            endpoints.tokenStore(tokenStore())
+                    .authenticationManager(authenticationManager)
+                    .accessTokenConverter(accessTokenConverter());
+        }
+    }
+
+    @Configuration
+    @EnableResourceServer
+    public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
+        private static final String RESOURCE_ID = "resource_id";
+        
+        @Override
+        public void configure(ResourceServerSecurityConfigurer resources) {
+            resources.resourceId(RESOURCE_ID).stateless(false);
+        }
+
+        @Override
+        public void configure(HttpSecurity http) throws Exception {
+            http.
+                    anonymous().disable()
+                    .authorizeRequests()
+                    .antMatchers("/users/**").access("hasRole('ADMIN')")
+                    .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
+        }
+
+    }
+
+    @Configuration
+    @EnableWebSecurity
+    @EnableGlobalMethodSecurity(prePostEnabled = true)
+    public class SecurityConfig extends WebSecurityConfigurerAdapter {
+        @Resource(name = "userService")
+        private UserDetailsService userDetailsService;
+
+        @Override
+        @Bean
+        public AuthenticationManager authenticationManagerBean() throws Exception {
+            return super.authenticationManagerBean();
+        }
+
+        @Autowired
+        public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
+            auth.userDetailsService(userDetailsService)
+                    .passwordEncoder(encoder());
+        }
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http
+                    .csrf().disable()
+                    .anonymous().disable()
+                    .authorizeRequests()
+                    .antMatchers("/api-docs/**").permitAll();
+        }
+
+        @Bean
+        public BCryptPasswordEncoder encoder(){
+            return new BCryptPasswordEncoder();
+        }
+    }
+
+    ```
+
+    https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#oauth2client
+    https://projects.spring.io/spring-security-oauth/docs/oauth2.html
+
+    [How spring works](https://medium.com/empathyco/how-spring-boot-autoconfiguration-works-6e09f911c5ce)  
+    [spring boot](https://geowarin.com/understanding-spring-boot/)  
+    [internal](https://www.zoltanraffai.com/blog/how-does-spring-work-internally/)  
+    [spring boot 源码分析](https://yq.aliyun.com/articles/617430?spm=a2c4e.11153940.0.0.5cca67feAkr2b2)  
+	[spring 面试题](https://segmentfault.com/a/1190000016686735)  
