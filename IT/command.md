@@ -24,6 +24,7 @@
    ```sh
    git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
    ```
+   - Change default git editor from nano to vim: `git config --global core.editor "vim"`
 
 1. Spotlight search does not contains application  
 
