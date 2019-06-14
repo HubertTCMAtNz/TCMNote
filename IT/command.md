@@ -1,5 +1,22 @@
 # Commands
 
+1. Ubuntu使用dd命令制作U盘系统启动盘  
+
+    ```sh
+    #1.查看U盘设备号，本例使用了8G的U盘，并且知道计算机安装了两块硬盘，那么U盘设备号就可以根据大小和硬盘数量很容易的分辨出来"/dev/sdc"
+    sudo fdisk -l
+
+    #2.如果U盘被自动挂载，请使用U盘设备号先umount
+    sudo umount /dev/sdc*
+    #3.准备好一个iso文件，使用dd命令将这个iso写入u盘
+    # if=后面跟要刻录到u盘的iso文件路径
+    # of=后面是u盘设备号（不需要带分区号）
+    # 写入过程是没有数据显示的，只要输出和输入路径没错，耐心等待即可，根据U盘读写速度以及iso文件大小，一般需要5~10分钟左右
+    sudo dd if=~/ubuntu-16.04-desktop-amd64.iso of=/dev/sdc
+    ```
+    
+    [reference](https://www.qingsword.com/qing/85.html)  
+
 1. kill process on port `sudo kill $(sudo lsof -t -i:8080)`  
 1. git  
 
