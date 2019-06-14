@@ -49,7 +49,7 @@
     [reference](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)  
     [reference](http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/)  
 
-    ```command
+    ```sh (does not work)
     sudo add-apt-repository ppa:webupd8team/java
     sudo apt update; sudo apt install oracle-java8-installer
     javac -version
@@ -97,6 +97,17 @@
    [reference](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)  
 
    ```sh
+   # Add the Cloud SDK distribution URI as a package source
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+    # Import the Google Cloud Platform public key
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+
+    # Update the package list and install the Cloud SDK
+    sudo apt-get update && sudo apt-get install google-cloud-sdk
+   ```
+
+   ```sh
    gcloud init  (gcloud init --console-only)
    gcloud auth list
    gcloud config list
@@ -115,6 +126,7 @@
 1. maven  
 
     ```sh
+    sudo apt install maven
     mvn clean package
     mvn appengine:run
     ```
