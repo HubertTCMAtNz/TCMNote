@@ -331,7 +331,9 @@
 	}
     ....
 
-    [Example](https://www.devglan.com/spring-security/spring-boot-oauth2-jwt-example)  
+    [Example blog](https://www.callicoder.com/spring-boot-security-oauth2-social-login-part-3/)  
+    [Example log](https://github.com/callicoder/spring-boot-react-oauth2-social-login-demo)  
+    https://stackoverflow.com/questions/38085035/oauth2-client-in-spring-security  
 
     ```java  out of date
     @Configuration
@@ -444,6 +446,10 @@
 
     https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#oauth2client
     https://projects.spring.io/spring-security-oauth/docs/oauth2.html
+    https://docs.spring.io/spring-security/site/docs/5.0.7.RELEASE/reference/html/oauth2login-advanced.html
+    https://docs.spring.io/spring-security/site/docs/current/reference/html/jc.html
+    https://www.callicoder.com/spring-boot-security-oauth2-social-login-part-2/
+    [Example](https://github.com/callicoder/spring-boot-react-oauth2-social-login-demo)  
 
     [How spring works](https://medium.com/empathyco/how-spring-boot-autoconfiguration-works-6e09f911c5ce)  
     [spring boot](https://geowarin.com/understanding-spring-boot/)  
