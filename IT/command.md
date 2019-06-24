@@ -241,6 +241,13 @@
     docker system prune
     docker system prune --volumes
     ```
+1. network  
+
+    ```sh
+    docker network ls
+	docker network inspect bridge
+    ```
+
 - postprogres
 
 [docker file reference](https://docs.docker.com/engine/reference/builder/)
