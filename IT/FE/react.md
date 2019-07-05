@@ -243,6 +243,7 @@
     [ant](https://pro.ant.design/docs/getting-started)  
 
 1. webpack  
+    [HMR: hot module replacement](https://medium.com/@rajaraodv/webpack-hot-module-replacement-hmr-e756a726a07)  
     [genearete multiple html](https://stackoverflow.com/questions/39798095/multiple-html-files-using-webpack)  
 
     ```code
