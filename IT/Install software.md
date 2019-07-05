@@ -4,7 +4,7 @@
 
 [Reference](https://www.howtoforge.com/tutorial/install-and-use-youtube-dl-on-ubuntu-1604/)
 
-```steps
+```sh
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
@@ -15,6 +15,11 @@ sudo chmod 755 /usr/bin/youtube-dl
 sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt-get update -y
 sudo apt-get install youtube-dlg -y
+
+sudo apt-get clean && sudo apt-get update && sudo apt-get install --fix-missing
+
+# youtube-dl https://www.youtube.com/watch?v=3ei8XjNhJwQ&list=PL0aO77tKg1k74ZYcRWyMigL-xASWkbQas
+
 ```
 
 ## Check port usage
