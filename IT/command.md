@@ -80,6 +80,13 @@
     ```
     [reference](https://superuser.com/questions/1245273/iterm2-version-3-individual-history-per-tab)  
 
+1. iTerm2 - merge a pane back to window or tab bar
+
+	```
+	The secret key combination to drag a pane back to a window or to the tab bar is: command + shift + option, while dragging the pane body (not its header!)
+	```
+	[reference](http://azaleasays.com/2014/03/05/iterm2-merge-a-pane-back-to-window-or-tab-bar/)  
+
 1. Use zsh in VS Code
     [reference](https://medium.com/@ozzievee/configuring-vs-code-integrated-terminal-to-use-oh-my-zsh-f545de1545c1)  
 
