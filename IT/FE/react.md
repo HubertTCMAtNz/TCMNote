@@ -8,7 +8,7 @@
 
     [referece](https://facebook.github.io/create-react-app/docs/adding-typescript)  
 
-1. React router
+1. React router  
     [reference](https://github.com/ReactTraining/react-router)  
     [multiple layout](https://gist.github.com/avinmathew/e82fe7e757b20cb337d5219e0ab8dc2c)  
     [multiple layout](http://www.uxshaper.com/different-layouts-with-react-router/)  
@@ -41,12 +41,44 @@
     [Type safe actions](https://github.com/piotrwitek/typesafe-actions)  
     [ReactReduxContext.Consumer](https://react-redux.js.org/using-react-redux/accessing-store)  
 
-1. react soga
+1. react soga  
     [reference](https://flaviocopes.com/redux-saga/)  
     [saga patter](https://medium.freecodecamp.org/redux-saga-common-patterns-48437892e11c)  
 
-    ```api
-    fork
+    ```typescript
+    function* watchSelectTeam() {
+        yield takeLatest(TeamsActionTypes.SELECT_TEAM, handleSelect)
+    }
+
+    function* handleSelect(action: ReturnType<typeof selectTeam>) {
+        try {
+            const detail = yield call(callApi, 'get', API_ENDPOINT, `/teams/${action.payload}`)
+            const players = yield call(callApi, 'get', API_ENDPOINT, `/teams/${action.payload}/players`)
+
+            if (detail.error || players.error) {
+                yield put(fetchError(detail.error || players.error))
+            } else {
+                yield put(teamSelected({ detail, players }))
+            }
+        } catch (err) {
+            if (err instanceof Error) {
+                yield put(fetchError(err.stack!))
+            } else {
+                yield put(fetchError('An unknown error occured.'))
+            }
+        }
+    }
+
+    export async function callApi(method: string, url: string, path: string, data?: any) {
+        const res = await fetch(url + '/api' + path, {
+            method,
+            headers: {
+            Accept: 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        return await res.json()
+    }
     ```
 
 1. Apollo Client  
@@ -172,7 +204,7 @@
 1. Advance skills  
    [React Higher-Order Components in TypeScript](https://medium.com/@jrwebdev/react-higher-order-component-patterns-in-typescript-42278f7590fb)  
 
-   ```example
+   ```typescript
    Enhancers
 
    interface WithLoadingProps {
@@ -244,7 +276,7 @@
 
 1. webpack  
     [HMR: hot module replacement](https://medium.com/@rajaraodv/webpack-hot-module-replacement-hmr-e756a726a07)  
-    [genearete multiple html](https://stackoverflow.com/questions/39798095/multiple-html-files-using-webpack)  
+    [generate multiple html](https://stackoverflow.com/questions/39798095/multiple-html-files-using-webpack)  
 
     ```code
     plugins: [
