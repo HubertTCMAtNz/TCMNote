@@ -129,6 +129,7 @@
     sudo apt install maven
     mvn clean package
     mvn appengine:run
+    mvn appengine:deploy
     ```
 
 1. view gradle task: `gradle tasks`  
@@ -156,7 +157,7 @@
 
     [set cookie](https://stackoverflow.com/questions/24642508/spring-inserting-cookies-in-a-rest-call-response)  
 
-    ```code
+    ```java
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResponseEntity<String> singleSignOn(@RequestBody String bodySso, HttpServletResponse response) {
 
@@ -174,7 +175,7 @@
 
     [delete cookie](https://attacomsian.com/blog/cookies-spring-boot)  
 
-    ```cookie
+    ```java
     // create a cookie
     Cookie cookie = new Cookie("username", null);
     cookie.setMaxAge(0);
@@ -199,7 +200,7 @@
 
     [global exception handler](https://www.toptal.com/java/spring-boot-rest-api-error-handling)  
 
-    ```code
+    ```java
     @Order(Ordered.HIGHEST_PRECEDENCE)
     @ControllerAdvice
     public class RestExceptionHandler extends ResponseEntityExceptionHandler {
