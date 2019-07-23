@@ -41,7 +41,7 @@
     [Type safe actions](https://github.com/piotrwitek/typesafe-actions)  
     [ReactReduxContext.Consumer](https://react-redux.js.org/using-react-redux/accessing-store)  
 
-1. react soga  
+1. react saga  
     [reference](https://flaviocopes.com/redux-saga/)  
     [saga patter](https://medium.freecodecamp.org/redux-saga-common-patterns-48437892e11c)  
 
@@ -93,9 +93,9 @@
     npm install graphql graphql-tag --save
 
     npm install react-apollo --save
-	```
+    ```
 
-	```javascript
+    ```javascript
     //index.js
 
     import React from 'react';
@@ -175,15 +175,12 @@
 
     [apollo without redux](https://medium.com/the-notice-board/life-without-redux-using-apollo-for-local-state-d32b020ff4d3)  
 
-    ```
-    ```
+    [apollo cache](https://levelup.gitconnected.com/basics-of-caching-data-in-graphql-7ce9489dac15)  
 
-	[apollo cache](https://levelup.gitconnected.com/basics-of-caching-data-in-graphql-7ce9489dac15)  
-
-	```
-	readQuery will never make a request to your GraphQL server. It will always read from the cache else throw an error; so make sure to only read data you know you have in the store.
-	Alternatively, the query method may send a request to your server if the appropriate data is not in your cache.
-	```
+    ```text
+    readQuery will never make a request to your GraphQL server. It will always read from the cache else throw an error; so make sure to only read data you know you have in the store.
+    Alternatively, the query method may send a request to your server if the appropriate data is not in your cache.
+    ```
 
 1. Example
     [code](https://github.com/resir014/react-redux-typescript-example)  
@@ -278,7 +275,7 @@
     [HMR: hot module replacement](https://medium.com/@rajaraodv/webpack-hot-module-replacement-hmr-e756a726a07)  
     [generate multiple html](https://stackoverflow.com/questions/39798095/multiple-html-files-using-webpack)  
 
-    ```code
+    ```typescript
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
