@@ -128,8 +128,8 @@
     ```sh
     sudo apt install maven
     mvn clean package
-    mvn appengine:run
-    mvn appengine:deploy
+    mvn clean package appengine:run
+    mvn clean package appengine:deploy
     ```
 
 1. view gradle task: `gradle tasks`  
