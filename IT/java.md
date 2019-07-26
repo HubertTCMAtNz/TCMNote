@@ -26,9 +26,9 @@
 
     [reference](https://linuxize.com/post/how-to-install-gradle-on-ubuntu-18-04/)  
 
-1. uninstall jdk
+1. uninstall jdk  
 
-    ```steps
+    ```sh
     sudo update-alternatives --remove "java" "/usr/lib/jvm/jdk[version]/bin/java"
 
     sudo update-alternatives --remove "javac" "/usr/lib/jvm/jdk[version]/bin/javac"
@@ -68,9 +68,9 @@
 
     [openjdk-8](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04)  
 
-    ```instal java8
-    https://www.liquidweb.com/kb/install-oracle-java-ubuntu-18-04/
-    https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+    ```sh instal java8
+    # https://www.liquidweb.com/kb/install-oracle-java-ubuntu-18-04/
+    # https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
     sudo apt install openjdk-8-jdk
     sudo update-alternatives --config java
     sudo update-alternatives --config javac
@@ -83,7 +83,7 @@
     [steps](https://github.com/3wks/spring-boot-gae)  
     [gradle](https://cloud.google.com/appengine/docs/standard/java/tools/gradle)  
 
-    ``` gradle
+    ```sh
     classpath 'com.google.cloud.tools:appengine-gradle-plugin:1.+'    // Latest 1.x.x release
     compile 'com.threewks.spring:spring-boot-gae:2.2.1' (https://mvnrepository.com/artifact/com.threewks.spring/spring-boot-gae)
 
@@ -456,4 +456,4 @@
     [spring boot](https://geowarin.com/understanding-spring-boot/)  
     [internal](https://www.zoltanraffai.com/blog/how-does-spring-work-internally/)  
     [spring boot 源码分析](https://yq.aliyun.com/articles/617430?spm=a2c4e.11153940.0.0.5cca67feAkr2b2)  
-	[spring 面试题](https://segmentfault.com/a/1190000016686735)  
+    [spring 面试题](https://segmentfault.com/a/1190000016686735)  
