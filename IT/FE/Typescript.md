@@ -44,12 +44,12 @@
 
     type NonNullableConveter<T, K extends keyof T> = {
         [P in K]: NonNullable<T[P]>;
-	};
-	
-	export function calculateRoundedPercentage<T extends number | {}>(
-		data: T[],
-		...params: T extends number ? [undefined?] : [(data: T) => number]
-	): number[] {
-		return [];
-	}
+    };
+
+    export function calculateRoundedPercentage<T extends number | {}>(
+        data: T[],
+        ...params: T extends number ? [undefined?] : [(data: T) => number]
+    ): number[] {
+        return [];
+    }
     ```

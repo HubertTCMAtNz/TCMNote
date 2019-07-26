@@ -1,6 +1,6 @@
 # React
 
-1. Create Typescript
+1. Create Typescript  
 
     ```shell
     yarn create react-app my-app --typescript
@@ -15,7 +15,7 @@
     [react router link locally historyApiFallback](https://tylermcginnis.com/react-router-cannot-get-url-refresh/)  
     [react router link locally  ](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually)  
 
-1. css
+1. css  
 
     ```detail:
     webpack config:
@@ -30,7 +30,7 @@
 
     [reference](https://medium.com/@marcelwopperer/how-to-use-bootstrap-in-your-react-app-using-css-modules-73fbc52de081)  
 
-1. enzyme(JS Testing)
+1. enzyme(JS Testing)  
    [reference](https://airbnb.io/enzyme/)  
 
 1. redux

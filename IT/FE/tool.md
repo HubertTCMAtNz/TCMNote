@@ -11,7 +11,7 @@
     sudo apt install yarn
     ```
 
-1. webpack HMR
+1. webpack HMR  
     [reference](https://medium.com/@rajaraodv/webpack-hot-module-replacement-hmr-e756a726a07)  
     [Webpack React Hot Loading not working for files in sub folders](https://stackoverflow.com/questions/35367533/webpack-react-hot-loading-not-working-for-files-in-sub-folders)  
 
