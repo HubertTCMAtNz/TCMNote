@@ -2,11 +2,14 @@
 
 1. Create Typescript  
 
-    ```shell
+    ```sh
     yarn create react-app my-app --typescript
     ```
 
     [referece](https://facebook.github.io/create-react-app/docs/adding-typescript)  
+    
+1. React Hooks  
+    [Reference](https://medium.com/the-guild/under-the-hood-of-reacts-hooks-system-eb59638c9dba)  
 
 1. React router  
     [reference](https://github.com/ReactTraining/react-router)  
@@ -73,7 +76,7 @@
         const res = await fetch(url + '/api' + path, {
             method,
             headers: {
-            Accept: 'application/json'
+                Accept: 'application/json'
             },
             body: JSON.stringify(data)
         })
@@ -113,9 +116,7 @@
     const httpLink = new HttpLink({
         uri: GITHUB_BASE_URL,
         headers: {
-            authorization: `Bearer ${
-            process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN
-            }`,
+            authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
         },
     })
     const cache = new InMemoryCache();
@@ -202,65 +203,64 @@
    [React Higher-Order Components in TypeScript](https://medium.com/@jrwebdev/react-higher-order-component-patterns-in-typescript-42278f7590fb)  
 
    ```typescript
-   Enhancers
-
+   // Enhancers
    interface WithLoadingProps {
-    loading: boolean;
+        loading: boolean;
     }
 
     const withLoading = <P extends object>(Component: React.ComponentType<P>) =>
     class WithLoading extends React.Component<P & WithLoadingProps> {
         render() {
-        const { loading, ...props } = this.props;
-        return loading ? <LoadingSpinner /> : <Component {...props as P} />;
+            const { loading, ...props } = this.props;
+            return loading ? <LoadingSpinner /> : <Component {...props as P} />;
         }
     };
 
-    Injectors
+    // Injectors
     import { Subtract } from 'utility-types';
 
     export interface InjectedCounterProps {
-    value: number;
-    onIncrement(): void;
-    onDecrement(): void;
+        value: number;
+        onIncrement(): void;
+        onDecrement(): void;
     }
 
     interface MakeCounterState {
-    value: number;
+        value: number;
     }
 
     const makeCounter = <P extends InjectedCounterProps>(
-    Component: React.ComponentType<P>
+        Component: React.ComponentType<P>
     ) =>
     class MakeCounter extends React.Component<
         Subtract<P, InjectedCounterProps>,
         MakeCounterState
     > {
         state: MakeCounterState = {
-        value: 0,
+            value: 0,
         };
 
         increment = () => {
-        this.setState(prevState => ({
-            value: prevState.value + 1,
-        }));
+            this.setState(prevState => ({
+                value: prevState.value + 1,
+            }));
         };
 
         decrement = () => {
-        this.setState(prevState => ({
-            value: prevState.value - 1,
-        }));
+            this.setState(prevState => ({
+                value: prevState.value - 1,
+            }));
         };
 
         render() {
-        return (
-            <Component
-            {...this.props as P}
-            value={this.state.value}
-            onIncrement={this.increment}
-            onDecrement={this.decrement}
-            />
-        );
+            return (
+                <Component
+                {...this.props as P}
+                value={this.state.value}
+                onIncrement={this.increment}
+                onDecrement={this.decrement}
+                />
+            );
         }
     };
    ```
