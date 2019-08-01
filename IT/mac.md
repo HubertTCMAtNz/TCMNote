@@ -64,3 +64,12 @@
    ```
 
    [reference](https://docs.brew.sh/FAQ)
+
+
+1. kill process by port  
+    ```
+    lsof -i tcp:3000
+    sudo killall node
+    sudo kill -9 `ps aux | grep node | grep -v grep | awk '{print $2}'`
+    ```
+    [reference](https://stackoverflow.com/questions/19968069/try-to-kill-all-nodes-but-failed-on-osx)  
