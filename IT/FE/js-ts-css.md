@@ -18,7 +18,7 @@
     [react router link locally historyApiFallback](https://tylermcginnis.com/react-router-cannot-get-url-refresh/)  
     [react router link locally  ](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually)  
 
-1. css  
+1. css lader in webpack  
 
     ```detail:
     webpack config:
@@ -289,3 +289,30 @@
         })
     ]
     ```
+
+## CSS  
+1. 用CSS画简单图标  
+    ```css
+    .icon-cross{
+        width: 20px;
+        height: 20px;
+        position: absolute;  /*方便相对于父元素进行定位*/
+    }
+
+    .icon-cross::before,
+    .icon-cross::after{
+        content: "";
+        position: absolute;  /*方便进行定位*/
+        height: 16px;
+        width: 1.5px;
+        top: 2px;
+        right: 9px;  /*设置top和right使图像在20*20框中居中*/
+    }
+    .icon-cross::before{
+        transform: rotate(45deg);  /*进行旋转*/
+    }
+    .icon-cross::after{
+        transform: rotate(-45deg);
+    }
+    ```
+    [reference](https://segmentfault.com/a/1190000007725106)  
