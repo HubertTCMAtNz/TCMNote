@@ -1,0 +1,1 @@
+[System Architecture: Strategy and Product Development for Complex Systems](https://www.amazon.com/s?k=System+Architecture&ref=nb_sb_noss)  
