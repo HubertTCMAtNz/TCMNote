@@ -269,6 +269,27 @@
     [material ui](https://material-ui.com/components/cards/)  
     [material ui free theme](https://demos.creative-tim.com/material-kit-react/?_ga=2.223690523.1876597192.1559035984-518466910.1559035984#/documentation/tutorial)  
     [material kit react](https://www.npmjs.com/package/material-kit-react)  
+    [material ui use svg](https://stackoverflow.com/questions/38510443/how-to-use-an-svg-file-in-a-svgicon-in-material-ui)  
+    
+    ```jsx
+    // JSX:
+    import Icon from '@material-ui/core/Icon';
+    import { makeStyles } from '@material-ui/styles';
+
+    <Icon classes={{root: classes.iconRoot}}>
+        <img className={classes.imageIcon} src="/graphics/firebase-logo.svg"/>
+    </Icon>
+    //Styles:
+
+    const useStyles = makeStyles({
+    imageIcon: {
+        height: '100%'
+    },
+    iconRoot: {
+        textAlign: 'center'
+    }
+    });
+    ```
     [ant](https://pro.ant.design/docs/getting-started)  
 
 1. webpack  
