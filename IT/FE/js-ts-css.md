@@ -35,6 +35,9 @@
 
 1. enzyme(JS Testing)  
    [reference](https://airbnb.io/enzyme/)  
+   
+1. best blogs  
+    [reference](https://overreacted.io/)  
 
 1. redux
     [reference](https://react-redux.js.org/introduction/basic-tutorial)  
