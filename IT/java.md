@@ -149,6 +149,7 @@
     [tutorial](https://www.graphql-java-kickstart.com/servlet/getting-started/)  
 
 1. spring boot  
+    [document](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/)  
     [security](https://www.baeldung.com/spring-security-login)  
     [rest api security](https://www.baeldung.com/securing-a-restful-web-service-with-spring-security)  
     [security](https://medium.com/@nydiarra/secure-a-spring-boot-rest-api-with-json-web-token-reference-to-angular-integration-e57a25806c50)  
