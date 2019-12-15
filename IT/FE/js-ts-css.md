@@ -1,3 +1,6 @@
+# Node
+1. [Debug in Node](https://medium.com/the-node-js-collection/debugging-node-js-with-google-chrome-4965b5f910f4)  
+
 # React
 
 1. Create Typescript
@@ -364,4 +367,6 @@
    [reference](https://segmentfault.com/a/1190000007725106)
 
 1. chess  
-   [reference](https://www.techighness.com/post/develop-two-player-chess-game-with-react-js/)
+   [reference](https://www.techighness.com/post/develop-two-player-chess-game-with-react-js/)  
+1. 放大镜  
+   [简书](https://www.jianshu.com/p/662f77e95b63)  
