@@ -1,6 +1,7 @@
 # Node
 1. [readline](https://stackabuse.com/reading-a-file-line-by-line-in-node-js/)  
 1. [Debug in Node](https://medium.com/the-node-js-collection/debugging-node-js-with-google-chrome-4965b5f910f4)  
+1. [simplyfy implementation](https://github.com/nodejs/node/pull/12442/commits/059f2960503eec1418c32226646f5a2af6ae85f0)  
 
 # React
 
