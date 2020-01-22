@@ -14,6 +14,42 @@ services.AddGraphQL(sp => SchemaBuilder.New()
     .AddType<EpisodeType>()
     .Create());
 ```
+1. create schema
+    ```C#
+    public Schema Create()
+    {
+        IServiceProvider services = _services?? new EmptyServiceProvider();
+        var descriptorContext = DescriptorContext.Create(
+            _options,
+            services,
+            CreateConventions(services));
+
+        IBindingLookup bindingLookup =_bindingCompiler.Compile(descriptorContext);
+        // Schema is created here.
+        IReadOnlyCollection<ITypeReference> types = GetTypeReferences(services, bindingLookup);
+
+        var lazy = new LazySchema();
+        TypeInitializer initializer = CreateTypeInitializer(services, descriptorContext, bindingLookup, types);
+        DiscoveredTypes discoveredTypes = initializer.Initialize(() => lazy.Schema, _options);
+
+        SchemaTypesDefinition definition = CreateSchemaDefinition(initializer, discoveredTypes);
+        if (definition.QueryType == null && _options.StrictValidation)
+        {
+            throw new SchemaException(SchemaErrorBuilder.New()
+                    .SetMessage(TypeResources.SchemaBuilder_NoQueryType)
+                    .Build());
+        }
+
+        Schema schema = discoveredTypes.Types
+            .Select(t => t.Type)
+            .OfType<Schema>()
+            .First();
+
+        schema.CompleteSchema(definition);
+        lazy.Schema = schema;
+        return schema;
+    }
+    ```
 1. Register HttpPostMiddleware
 
 ```C#
@@ -38,6 +74,7 @@ public HttpPostMiddleware(
 public static IServiceCollection AddGraphQL(this IServiceCollection services, Func<IServiceProvider, ISchema> schemaFactory)
 {
 //......
+
 // register default middleware and service
 // midlleware:
 //  Diagnostics (InstrumentationMiddleware, RequestTimeoutMiddleware, ExceptionMiddleware)
