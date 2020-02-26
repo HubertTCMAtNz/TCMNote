@@ -74,7 +74,9 @@
     sudo apt install openjdk-8-jdk
     sudo update-alternatives --config java
     sudo update-alternatives --config javac
+    # set $JAVA_HOME
     sudo vim /etc/environment
+    # Add JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/"
     source /etc/environment
     ```
 
