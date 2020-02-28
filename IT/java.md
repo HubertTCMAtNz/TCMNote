@@ -132,6 +132,7 @@
     mvn clean package
     mvn clean package appengine:run
     mvn clean package appengine:deploy
+    mvn -pl api appengine:run
     ```
 
 1. view gradle task: `gradle tasks`  
@@ -460,3 +461,4 @@
     [internal](https://www.zoltanraffai.com/blog/how-does-spring-work-internally/)  
     [spring boot 源码分析](https://yq.aliyun.com/articles/617430?spm=a2c4e.11153940.0.0.5cca67feAkr2b2)  
     [spring 面试题](https://segmentfault.com/a/1190000016686735)  
+    [spring login with react](https://dzone.com/articles/integrating-spring-boot-and-react-with-spring-secu-1)  
