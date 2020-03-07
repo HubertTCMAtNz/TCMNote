@@ -77,15 +77,17 @@ sudo apt-get install docker.io
 
 ```sh
 apt-get install zsh
-apt-get install git-core
+sudo apt-get install powerline fonts-powerline
 
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-command -v zsh | sudo tee -a /etc/shells
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+
+nano .zshrc
 
 chsh -s `which zsh`
 
 sudo shutdown -r now
 ```
 
-[reference](https://gist.github.com/tsabat/1498393)
+[reference](https://dev.to/mskian/install-z-shell-oh-my-zsh-on-ubuntu-1804-lts-4cm4)
