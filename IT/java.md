@@ -134,6 +134,35 @@
     mvn clean package appengine:deploy
     mvn -pl api appengine:run
     ```
+    
+    [lifecycle reference](https://maven.apache.org/ref/3.6.2/maven-core/lifecycles.html)  
+    ```xml
+    <phases>
+        <phase>validate</phase>
+        <phase>initialize</phase>
+        <phase>generate-sources</phase>
+        <phase>process-sources</phase>
+        <phase>generate-resources</phase>
+        <phase>process-resources</phase>
+        <phase>compile</phase>
+        <phase>process-classes</phase>
+        <phase>generate-test-sources</phase>
+        <phase>process-test-sources</phase>
+        <phase>generate-test-resources</phase>
+        <phase>process-test-resources</phase>
+        <phase>test-compile</phase>
+        <phase>process-test-classes</phase>
+        <phase>test</phase>
+        <phase>prepare-package</phase>
+        <phase>package</phase>
+        <phase>pre-integration-test</phase>
+        <phase>integration-test</phase>
+        <phase>post-integration-test</phase>
+        <phase>verify</phase>
+        <phase>install</phase>
+        <phase>deploy</phase>
+    </phases>
+    ```
 
 1. view gradle task: `gradle tasks`  
 
