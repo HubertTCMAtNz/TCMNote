@@ -91,3 +91,20 @@ sudo shutdown -r now
 ```
 
 [reference](https://dev.to/mskian/install-z-shell-oh-my-zsh-on-ubuntu-1804-lts-4cm4)
+
+
+# install node  
+[node js](https://medium.com/@tgmarinho/how-to-install-node-js-via-binary-archive-on-linux-ab9bbe1dd0c2)  
+
+```bash
+sudo mkdir /usr/local/lib/node
+sudo tar -xJvf node-v8.9.4-linux-x64.tar.xz
+sudo mv /usr/local/lib/node/node-v8.9.4-linux-x64 /usr/local/lib/node/nodejs
+
+#Set the environment variable ~/.profile, add below to the end
+# Nodejs
+export NODEJS_HOME=/usr/local/lib/node/nodejs
+export PATH=$NODEJS_HOME/bin:$PATH
+# Refresh profile
+. ~/.profile
+```
