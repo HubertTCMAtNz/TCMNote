@@ -57,7 +57,7 @@
 
 1. react saga  
    [reference](https://flaviocopes.com/redux-saga/)  
-   [saga patter](https://medium.freecodecamp.org/redux-saga-common-patterns-48437892e11c)
+   [saga pattern](https://medium.freecodecamp.org/redux-saga-common-patterns-48437892e11c)
 
    ```typescript
    function* watchSelectTeam() {
