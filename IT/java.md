@@ -133,6 +133,7 @@
     mvn clean package appengine:run
     mvn clean package appengine:deploy
     mvn -pl api appengine:run
+    gcloud beta emulators datastore start --host-port=localhost:8484
     ```
     
     [lifecycle reference](https://maven.apache.org/ref/3.6.2/maven-core/lifecycles.html)  
