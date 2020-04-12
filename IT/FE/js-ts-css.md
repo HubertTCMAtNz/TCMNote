@@ -217,6 +217,7 @@
    [yarn+spring](https://medium.com/@itzgeoff/including-react-in-your-spring-boot-maven-build-ae3b8f8826e)  
    [run webpack with gradle](https://guides.gradle.org/running-webpack-with-gradle/)  
    [react tutorial](https://auth0.com/blog/react-tutorial-building-and-securing-your-first-app/)
+   [axio to refresh token](https://medium.com/@monkov/react-using-axios-interceptor-for-token-refreshing-1477a4d5fc26)  
 
    ```api
    ConnectedRouter
