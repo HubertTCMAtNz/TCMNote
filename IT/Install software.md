@@ -107,4 +107,7 @@ export NODEJS_HOME=/usr/local/lib/node/nodejs
 export PATH=$NODEJS_HOME/bin:$PATH
 # Refresh profile
 . ~/.profile
+
+#In order to install npm packages globally with sudo permission, /usr/bin/npm should be available. If npm exists on some other directory, create a soft link like:
+sudo ln -s /usr/local/bin/npm /usr/bin/npm
 ```
