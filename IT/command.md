@@ -102,7 +102,11 @@
     ```
     "editor.renderWhitespace": "all",
     ```
-1. convert heic images: `for file in *.heic; do heif-convert $file ${file/%.heic/.jpg}; done`
+1. convert heic images: 
+    ```sh
+    for file in *.HEIC; do mv -- $file ${file/%.heic/}.heic; done
+    for file in *.heic; do heif-convert $file ${file/%.heic/.jpg}; done
+    ```
 
 ## git
 1. enable git to display no-anscii
