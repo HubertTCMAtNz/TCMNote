@@ -79,6 +79,20 @@
     # Add JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/"
     source /etc/environment
     ```
+    
+    [uninstall java 8](https://novicestuffs.wordpress.com/2017/04/25/how-to-uninstall-java-from-linux/)  
+    [unistall all java versions](https://askubuntu.com/questions/84483/how-to-completely-uninstall-java)  
+    ```sh
+    sudo apt-get remove “openjdk*”
+    dpkg-query -W -f='${binary:Package}\n' | grep -E -e '^(ia32-)?(sun|oracle)-java' -e '^openjdk-' -e '^icedtea' -e '^(default|gcj)-j(re|dk)' -e '^gcj-(.*)-j(re|dk)' -e '^java-common' | xargs sudo apt-get -y remove
+sudo apt-get -y autoremove
+    dpkg -l | grep ^rc | awk '{print($2)}' | xargs sudo apt-get -y purge
+    sudo bash -c 'ls -d /home/*/.java' | xargs sudo rm -rf
+    sudo rm -rf /usr/lib/jvm/*
+    for g in ControlPanel java java_vm javaws jcontrol jexec keytool mozilla-javaplugin.so orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200 appletviewer apt extcheck HtmlConverter idlj jar jarsigner javac javadoc javah javap jconsole jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii rmic schemagen serialver wsgen wsimport xjc xulrunner-1.9-javaplugin.so; do sudo update-alternatives --remove-all $g; done
+    sudo updatedb
+sudo locate -b '\pack200'
+    ```
 
 1. update spring boot to GAE  
     [gradle template](https://github.com/kaiinui/template-spring-boot-gae/blob/master/build.gradle)  
@@ -135,6 +149,7 @@
     mvn -pl api appengine:deploy
     mvn -pl api appengine:run
     gcloud beta emulators datastore start --host-port=localhost:8484
+    java --SPRING_PROFILES_ACTIVE="dev" -jar ./target/api-0.0.6.jar
     ```
     
     [lifecycle reference](https://maven.apache.org/ref/3.6.2/maven-core/lifecycles.html)  

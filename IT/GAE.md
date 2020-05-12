@@ -29,7 +29,8 @@
     }
     ```
 - 
-1. java 11 in GAE (https://cloud.google.com/appengine/docs/standard/java11/quickstart)  
+1. [java 11 in GAE](https://cloud.google.com/appengine/docs/standard/java11/quickstart)  
+- [Writing Your Java 11 Web Service](https://cloud.google.com/appengine/docs/standard/java11/building-app/writing-web-service?hl=ru)
 
 1. Quotas (https://cloud.google.com/appengine/quotas?hl=en_US)  
 - [Managing App Engine costs](https://cloud.google.com/appengine/docs/managing-costs?hl=en_US)  
