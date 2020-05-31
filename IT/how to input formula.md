@@ -1,5 +1,7 @@
 [reference](https://goessner.github.io/markdown-it-texmath/index.html)  
 [Writing Mathematic Fomulars in Markdown](https://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/)  
+[LaTeX](https://www.latex-tutorial.com/tutorials/amsmath/)  
+[symbol](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject)  
 
 - $\frac{1}{2}$
 - $cos^2(\frac{10y}{2}x-\frac{\pi}{12})$
