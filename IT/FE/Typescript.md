@@ -56,10 +56,13 @@
 
 1. [](https://stackoverflow.com/questions/43481518/get-argument-types-for-function-class-constructor)  
 
-``` typescript
-type ArgumentsType<T extends (...args: any[]) => any> = T extends (...args: infer A) => any ? A : never;
+    ``` typescript
+    type ArgumentsType<T extends (...args: any[]) => any> = T extends (...args: infer A) => any ? A : never;
 
-type Func = (a: number, b: string) => boolean;
-type Args = ArgumentsType<Func> // type Args = [number, string];
-type Ret = ReturnType<Func> // type Ret = boolean;
-```
+    type Func = (a: number, b: string) => boolean;
+    type Args = ArgumentsType<Func> // type Args = [number, string];
+    type Ret = ReturnType<Func> // type Ret = boolean;
+    ```
+
+1. parse csv
+    - https://medium.com/@ole.ersoy/using-papaparse-with-typescript-b8dea81bf602
