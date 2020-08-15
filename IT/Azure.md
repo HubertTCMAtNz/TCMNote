@@ -1,0 +1,1 @@
+[azure function](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
