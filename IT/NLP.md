@@ -7,3 +7,10 @@
 [word embedding](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
 [word vector](https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/)
 [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+
+## Algorithm
+- minimum edit distance
+- Viterbi
+- CKY
+- word2vec
+- GloVe
