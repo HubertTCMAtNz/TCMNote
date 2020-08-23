@@ -7,6 +7,8 @@
 [word embedding](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
 [word vector](https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/)
 [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+[Stanford Question Answering Dataset (SQuAD)](https://rajpurkar.github.io/SQuAD-explorer/)
+[Question Answer](https://towardsdatascience.com/nlp-building-a-question-answering-model-ed0529a68c54)
 
 ## Algorithm
 - minimum edit distance
