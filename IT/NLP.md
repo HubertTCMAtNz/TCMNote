@@ -9,6 +9,7 @@
 [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 [Stanford Question Answering Dataset (SQuAD)](https://rajpurkar.github.io/SQuAD-explorer/)
 [Question Answer](https://towardsdatascience.com/nlp-building-a-question-answering-model-ed0529a68c54)
+[CS224U](http://web.stanford.edu/class/cs224u/)
 
 ## Algorithm
 - minimum edit distance
