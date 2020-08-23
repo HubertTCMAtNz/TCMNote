@@ -12,6 +12,8 @@
 [CS224U](http://web.stanford.edu/class/cs224u/)
 
 ## Algorithm
+- LAS (Listen, Attend, Spell)
+- SVD
 - minimum edit distance
 - Viterbi
 - CKY
