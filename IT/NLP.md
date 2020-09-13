@@ -11,6 +11,7 @@
 [Question Answer](https://towardsdatascience.com/nlp-building-a-question-answering-model-ed0529a68c54)  
 [CS224U](http://web.stanford.edu/class/cs224u/)  
 [Assignment](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html)  
+[NTU Assignment](https://www.csie.ntu.edu.tw/~miulab/s107-adl/)  
 [How to Write a Spelling Corrector](http://norvig.com/spell-correct.html)  
 
 ## Algorithm
