@@ -13,6 +13,7 @@
 [Assignment](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html)  
 [NTU Assignment](https://www.csie.ntu.edu.tw/~miulab/s107-adl/)  
 [How to Write a Spelling Corrector](http://norvig.com/spell-correct.html)  
+[TwitterStream](https://archive.org/details/twitterstream)  
 
 ## Algorithm
 - Seq2Seq
