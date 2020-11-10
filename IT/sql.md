@@ -1,0 +1,1 @@
+- [sql internal](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-guides?view=sql-server-ver15)
