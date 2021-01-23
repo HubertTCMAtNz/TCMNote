@@ -66,3 +66,19 @@
 
 1. parse csv
     - https://medium.com/@ole.ersoy/using-papaparse-with-typescript-b8dea81bf602
+    
+1. Type for “every possible string value except …”
+    ```
+    type ReservedNames = "this" | "that"
+    type NotA<T> = T extends ReservedNames ? never : T
+    type NotB<T> = ReservedNames extends T ? never : T
+    type FooName<T> = NotA<T> & NotB<T>
+
+    const f1: FooName<'This'> = 'This' // works
+    const f2: FooName<'this'> = 'this' // error
+
+    const f3: FooName<string> = 'this' //error
+    const f4: FooName<any> = 'this' // error
+    const f5: FooName<unknown> = 'this' // error
+    ```
+    [reference](https://stackoverflow.com/questions/51442157/type-for-every-possible-string-value-except)
