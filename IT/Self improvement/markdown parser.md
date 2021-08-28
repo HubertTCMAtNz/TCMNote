@@ -4,3 +4,4 @@ resource:
 [markdown it](https://github.com/markdown-it/markdown-it)  
 [marked](https://github.com/markedjs/marked)  
 [top markdown parser](https://awesomeopensource.com/projects/markdown-parser)  
+[GitHub Flavored Markdown Spec](https://github.github.com/gfm/)  
