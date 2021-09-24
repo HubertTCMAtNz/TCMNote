@@ -45,7 +45,8 @@
 
 1. Spotlight search does not contains application  
 
-	``` does not work
+	```sh
+    # does not work
 	sudo mdutil -a -i off
 	sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
@@ -54,27 +55,28 @@
 	[reference](https://apple.stackexchange.com/questions/62715/applications-dont-show-up-in-spotlight)  
 
 1. indexing and search are disabled
-	``` does not work
+	```sh
+    # does not work
 	locate .metadata_never_index
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 	sudo mdutil -i on /
 	```
 
-	```
+	```sh
 	sudo mdutil -a -i off 
 	sudo mdutil -a -i on 
 	```
 	[reference](http://blog.shiraj.com/2014/01/terminal-commands-for-improving-spotlight-indexing-volume/)  
 
 1. recovery mode
-	```
+	```sh
 	csrutil disable
 	csrutil enable
 	```
 
 1. command history per tab  
-    ```
-    If you are using zsh, append these two lines to .zshrc
+    ```sh
+    # If you are using zsh, append these two lines to .zshrc
 
     unsetopt inc_append_history
     unsetopt share_history
@@ -112,7 +114,7 @@
 ## git
 1. enable git to display no-anscii
 
-    ```
+    ```sh
     git config --global core.quotepath false
     ```
     [reference](https://stackoverflow.com/questions/4144417/how-to-handle-asian-characters-in-file-names-in-git-on-os-x)  
@@ -121,19 +123,19 @@
 
     1. create different public key  
 
-    ```
-    $ ssh-keygen -t rsa -C "your_email@youremail.com"
+    ```sh
+    ssh-keygen -t rsa -C "your_email@youremail.com"
     ```
 
     1. for example, one key is created in `~/.ssh/id_rsa_activehacker`  
     use following command to add the ssh key  
     if windows, run  
-    ```
+    ```sh
     eval `ssh-agent -s`
     ```
     [reference](https://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent)  
 
-    ```
+    ```sh
     $ ssh-add ~/.ssh/id_rsa_activehacker
 
     $ ssh-add -D
@@ -142,7 +144,7 @@
 
     1. Modify the ssh config  
 
-    ```
+    ```sh
     $ cd ~/.ssh/
     $ touch config
     $ subl -a config
@@ -150,7 +152,7 @@
 
     then add  
 
-    ```
+    ```sh
     #activehacker account
     Host github.com-activehacker
         HostName github.com
@@ -163,7 +165,7 @@
 
     1. Test your connection  
 
-        ```
+        ```sh
         $ ssh -T git@github.com-activehacker
         ```
 
