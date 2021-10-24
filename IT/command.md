@@ -1,5 +1,14 @@
 # Commands
-
+1. delete old kernals
+    ```sh
+    dpkg --list | grep linux-image | awk '{ print $2 }' | sort -V | sed -n '/'`uname -r`'/q;p' | xargs sudo apt-get -y purge
+    
+    sudo apt-get autopurge $(dpkg -l | grep linux-image | grep -v ^ii | awk '{print $2}')
+    ```
+    https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu
+    https://askubuntu.com/questions/1366666/how-to-remove-deleted-kernels-from-dpkg-list-linux-image
+    
+    
 1. install Insomnia  
     
     ```sh
