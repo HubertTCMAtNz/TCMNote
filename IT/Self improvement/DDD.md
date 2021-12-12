@@ -8,3 +8,6 @@
     [micro service](https://martinfowler.com/articles/microservices.html)  
     [Developing microservices with aggregates - Chris Richardson](https://www.youtube.com/watch?v=7kX3fs0pWwc)  
     [Event sourcing](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)  
+    [ebay staging idea](https://tech.ebayinc.com/engineering/the-staging-dichotomy-part-one/)  
+    https://gist.github.com/OlegIlyenko/a5a9ab1b000ba0b5b1ad
+    [kafka](https://kafka-tutorials.confluent.io/)  
