@@ -1,0 +1,1 @@
+- kill process by name: `taskkill /IM "kdiff3" /F`  
