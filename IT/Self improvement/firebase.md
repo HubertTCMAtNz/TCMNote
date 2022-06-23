@@ -1,0 +1,5 @@
+- How to setup local dev env
+- What is the index of firebase realtime database? https://firebase.google.com/docs/database
+    - Is it only one db per project?
+    - How to set index?
+- How to use graphql in cloud functions?
