@@ -29,5 +29,9 @@
     "files.trimTrailingWhitespace": false,
     "editor.trimAutoWhitespace": false,
     "editor.formatOnSave": false
-  }
+  },
+  "files.associations": {
+    "*.tikz": "latex"
+  },
+  "latex-workshop.formatting.latex": "latexindent"
 }
