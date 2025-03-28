@@ -3,6 +3,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,intersections,through,backgrounds}
 
+
 \begin{document}
 
 \begin{tikzpicture}
@@ -45,5 +46,39 @@
     \node[anchor=north west] at (3,2) {C}; % Top-right
     \node[anchor=north east] at (0,2) {D}; % Top-left
 \end{tikzpicture}
+
+
+\begin{tikzpicture}
+    \def\base{4}      % Length of the base
+    \def\height{3}    % Height of the triangle
+    \def\halfbase{\base/2} % Half of the base
+
+    % Draw the triangle
+    \draw (0,0) -- (\base,0) -- (\halfbase,\height) -- cycle;
+
+    % Draw the height (optional)
+    \draw[dashed, red] (\halfbase,0) -- (\halfbase,\height);
+
+    % Label the height (optional)
+    \node[right] at (\halfbase,\height/2) {height};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (1,2.5);
+    \coordinate (C) at (4,0);
+    \draw (A) -- (B) -- (C) -- cycle;
+    \draw (B) -- ($(A)!(B)!(C)$) ++(90:0.2) -- ++(0:0.2) -- +(-90:0.2);
+    \draw (A) -- ($(B)!(A)!(C)$) ++(-39.806:0.2) -- ++(50.194:-0.2) -- +(-39.806:-0.2);
+    \draw (C) -- ($(A)!(C)!(B)$) ++(68.2:-0.2) -- ++(-21.8:0.2) -- +(68.2:0.2);
+\end{tikzpicture}
+
+
+
+
+
+
+
+
 
 \end{document}
