@@ -1,0 +1,25 @@
+\documentclass{standalone}
+
+\usepackage{tkz-base,tkz-euclide} % loads TikZ
+
+\begin{document}
+
+\begin{tikzpicture}
+    \tkzInit[xmin=-5,xmax=5] % from tkz-base
+    \tkzDefPoints{-3/0/P,3/0/Q}
+    \tkzDrawX[label={},noticks,-] % from tkz-base
+    \tkzDrawSegment[<->](P,Q)
+    %from P \foreach is a command from Tikz
+    \foreach \i/\j in {-3/3,-4/3,-1/2,-2/-3,-4/-2,-1/-4,0/-1,-3/3}
+        {\tkzDefPoint(\i,\j){T}
+            \tkzDrawSegment[->](P,T)
+        }
+    %from Q
+    \foreach \i/\j in {3/3,4/3,1/2,2/-3,4/-2,1/-4,1/-1,1/3}
+        {\tkzDefPoint(\i,\j){T}
+            \tkzDrawSegment[->](Q,T)
+        }
+    \tkzLabelPoints[below right](P,Q)
+\end{tikzpicture}
+
+\end{document}
